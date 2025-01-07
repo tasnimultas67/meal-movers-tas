@@ -1,4 +1,5 @@
 import DeliverLocation from "@/components/HomeComponents/DeliverLocation";
+import FavouriteCuisines from "@/components/HomeComponents/FavouriteCuisines";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
@@ -23,6 +24,15 @@ export default function Home() {
             <button className="bg-black p-[0.68rem] rounded-tr rounded-br">
               <MagnifyingGlassIcon className="size-4 text-white" />
             </button>
+          </div>
+        </div>
+      </section>
+      {/* Favourite Cuisines */}
+      <section className="border-b py-20">
+        <div>
+          <div>
+            <h2>Favourite Cuisines</h2>
+            <FavouriteCuisines />
           </div>
         </div>
       </section>
