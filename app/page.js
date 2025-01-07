@@ -3,7 +3,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 export default function Home() {
   return (
     <div>
-      <section className="h-screen flex items-center justify-center">
+      <section className="h-screen flex items-center justify-center border-b">
         <div className="text-center space-y-6">
           <h1 className="text-6xl font-bold">
             Savor Every Bite, Delivered Right
