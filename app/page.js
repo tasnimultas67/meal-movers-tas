@@ -1,8 +1,9 @@
+import DeliverLocation from "@/components/HomeComponents/DeliverLocation";
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-[95%]  m-auto">
       <section className="h-screen flex items-center justify-center border-b">
         <div className="text-center space-y-6">
           <h1 className="text-6xl font-bold">
@@ -25,7 +26,12 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="h-screen"></section>
+      <section className="py-20">
+        <div className="space-y-8">
+          <h2 className="text-center text-4xl font-bold">We deliver to</h2>
+          <DeliverLocation />
+        </div>
+      </section>
     </div>
   );
 }
