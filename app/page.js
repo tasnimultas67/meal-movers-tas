@@ -10,8 +10,10 @@ export default function Home() {
       {/* Favourite Cuisines */}
       <section className="border-b py-20">
         <div>
-          <div>
-            <h2>Favourite Cuisines</h2>
+          <div className="space-y-6">
+            <h2 className="text-center text-4xl font-bold">
+              Favourite Cuisines
+            </h2>
             <FavouriteCuisines />
           </div>
         </div>

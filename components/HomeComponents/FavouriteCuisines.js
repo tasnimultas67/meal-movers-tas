@@ -9,14 +9,14 @@ const cuisine = {
 };
 
 const FavouriteCuisines = () => {
-  const timesToShow = 6;
+  const timesToShow = 7;
   const cuisinesTotal = new Array(timesToShow).fill(cuisine);
 
   return (
-    <div className="grid grid-cols-6 gap-2">
+    <div className="grid grid-cols-7 gap-2">
       {cuisinesTotal.map((cuisin, index) => (
         <Link href="#" key={index} className="">
-          <div className="border rounded-2xl overflow-hidden group/cuisineCard hover:border-black bg-gray-50">
+          <div className="border rounded-xl overflow-hidden group/cuisineCard hover:border-themeColor bg-gray-50">
             <div className="overflow-hidden">
               <Image
                 className="h-28 object-cover group-hover/cuisineCard:scale-110 transition-all"
