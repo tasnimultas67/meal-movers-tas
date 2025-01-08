@@ -1,3 +1,4 @@
+import AppDownloadBanner from "@/components/HomeComponents/AppDownloadBanner";
 import DeliverLocation from "@/components/HomeComponents/DeliverLocation";
 import FavouriteCuisines from "@/components/HomeComponents/FavouriteCuisines";
 import Hero from "@/components/HomeComponents/Hero";
@@ -5,7 +6,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
   return (
-    <div className="w-[95%]  m-auto">
+    <div className="w-[95%]  m-auto pb-10">
       <Hero />
       {/* Favourite Cuisines */}
       <section className="border-b py-20">
@@ -24,6 +25,7 @@ export default function Home() {
           <DeliverLocation />
         </div>
       </section>
+      <AppDownloadBanner />
     </div>
   );
 }
