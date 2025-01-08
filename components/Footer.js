@@ -107,12 +107,9 @@ const Footer = () => {
           </div>
         </div>
         <div className="border-b border-white/10 py-8 grid grid-cols-2 gap-y-6 md:grid-cols-4">
-          <div className="space-y-2">
+          <ul className="space-y-2">
             {companyInfo.map((menu) => (
-              <li
-                key={menu.pageTitle}
-                className={`list-none text-xs text-white hover:text-themeColor w-fit`}
-              >
+              <li key={menu.pageTitle} className={`list-none text-xs`}>
                 <Link
                   href={menu.url}
                   className={`${
@@ -120,19 +117,16 @@ const Footer = () => {
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
                       : ""
-                  }`}
+                  } text-white hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
               </li>
             ))}
-          </div>
-          <div className="space-y-2">
+          </ul>
+          <ul className="space-y-2">
             {companyInfo.map((menu) => (
-              <li
-                key={menu.pageTitle}
-                className="list-none text-xs text-white hover:text-themeColor w-fit"
-              >
+              <li key={menu.pageTitle} className="list-none text-xs">
                 <Link
                   href={menu.url}
                   className={`${
@@ -140,19 +134,16 @@ const Footer = () => {
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
                       : ""
-                  }`}
+                  } text-white hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
               </li>
             ))}
-          </div>
-          <div className="space-y-2">
+          </ul>
+          <ul className="space-y-2">
             {companyOffers.map((menu) => (
-              <li
-                key={menu.pageTitle}
-                className="list-none text-xs text-white hover:text-themeColor w-fit"
-              >
+              <li key={menu.pageTitle} className="list-none text-xs">
                 <Link
                   href={menu.url}
                   className={`${
@@ -160,19 +151,16 @@ const Footer = () => {
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
                       : ""
-                  }`}
+                  } text-white hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
               </li>
             ))}
-          </div>
-          <div className="space-y-2">
+          </ul>
+          <ul className="space-y-2">
             {companyHelps.map((menu) => (
-              <li
-                key={menu.pageTitle}
-                className="list-none text-xs text-white hover:text-themeColor w-fit"
-              >
+              <li key={menu.pageTitle} className="list-none text-xs ">
                 <Link
                   href={menu.url}
                   className={`${
@@ -180,13 +168,13 @@ const Footer = () => {
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
                       : ""
-                  }`}
+                  } text-white hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
               </li>
             ))}
-          </div>
+          </ul>
         </div>
         {/* Copyright footer */}
         <div className="pt-3">
