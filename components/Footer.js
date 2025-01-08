@@ -9,20 +9,20 @@ const companyInfo = [
   { pageTitle: "About Us", url: "/about-us" },
   { pageTitle: "Contact Us", url: "/contact-us" },
   { pageTitle: "Press", url: "/" },
-  { pageTitle: "How Meal Movers works", url: "/" },
+  { pageTitle: "How Meal Movers works", url: "/how-meal-movers-works" },
   { pageTitle: "Download apps", url: "/" },
-  { pageTitle: "Careers", url: "/" },
+  { pageTitle: "Careers", url: "/careers" },
   { pageTitle: "Help & support", url: "/" },
 ];
 
 const companyHelps = [
-  { pageTitle: "Partner with us", url: "/" },
+  { pageTitle: "Partner with us", url: "/become-a-partner" },
   { pageTitle: "Ride with us", url: "/" },
-  { pageTitle: "Terms & conditions", url: "/" },
+  { pageTitle: "Terms & conditions", url: "/terms-and-conditions" },
   { pageTitle: "Refund & cancellation", url: "/" },
-  { pageTitle: "Privacy policy", url: "/" },
+  { pageTitle: "Privacy policy", url: "/privacy-policy" },
   { pageTitle: "Rider Privacy policy", url: "/" },
-  { pageTitle: "Partner Privacy policy", url: "/" },
+  { pageTitle: "Partner Privacy policy", url: "/partner-privacy-policy" },
   { pageTitle: "Security policy", url: "/" },
 ];
 
@@ -31,15 +31,15 @@ const companyOffers = [
   { pageTitle: "Pick-up", url: "/" },
   { pageTitle: "Dine-in", url: "/" },
   { pageTitle: "Flowers delivery", url: "/" },
-  { pageTitle: "Super Meal Movers subscription", url: "/" },
+  { pageTitle: "Super Meal Movers subscription", url: "/subscription-info" },
   { pageTitle: "Meal Movers deals", url: "/" },
   { pageTitle: "Reward programms", url: "/" },
   { pageTitle: "Terms Of Referral and Condition", url: "/" },
 ];
 
 const Footer = () => {
-  const copyrightYear = new Date().getFullYear();
   const pathName = usePathname();
+  const copyrightYear = new Date().getFullYear();
   return (
     <div>
       <footer className="bg-slate-950 w-[98%] m-auto p-6 pb-3 mb-2 rounded-lg pt-8">
@@ -116,8 +116,8 @@ const Footer = () => {
                     (menu.url === "/" && pathName === "/") ||
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
-                      : ""
-                  } text-white hover:text-themeColor w-fit`}
+                      : "text-white"
+                  } hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
@@ -133,8 +133,8 @@ const Footer = () => {
                     (menu.url === "/" && pathName === "/") ||
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
-                      : ""
-                  } text-white hover:text-themeColor w-fit`}
+                      : "text-white"
+                  }  hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
@@ -150,8 +150,8 @@ const Footer = () => {
                     (menu.url === "/" && pathName === "/") ||
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
-                      : ""
-                  } text-white hover:text-themeColor w-fit`}
+                      : "text-white"
+                  }  hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
@@ -167,8 +167,8 @@ const Footer = () => {
                     (menu.url === "/" && pathName === "/") ||
                     (menu.url !== "/" && pathName.includes(menu.url))
                       ? "text-themeColor"
-                      : ""
-                  } text-white hover:text-themeColor w-fit`}
+                      : "text-white"
+                  }  hover:text-themeColor w-fit`}
                 >
                   {menu.pageTitle}
                 </Link>
