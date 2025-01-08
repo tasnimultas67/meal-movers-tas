@@ -1,11 +1,13 @@
+"use client";
 import { EnvelopeIcon, HomeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
 const companyInfo = [
   { pageTitle: "Home", url: "/" },
-  { pageTitle: "About Us", url: "/" },
-  { pageTitle: "Contact Us", url: "/" },
+  { pageTitle: "About Us", url: "/about-us" },
+  { pageTitle: "Contact Us", url: "/contact-us" },
   { pageTitle: "Press", url: "/" },
   { pageTitle: "How Meal Movers works", url: "/" },
   { pageTitle: "Download apps", url: "/" },
@@ -37,6 +39,7 @@ const companyOffers = [
 
 const Footer = () => {
   const copyrightYear = new Date().getFullYear();
+  const pathName = usePathname();
   return (
     <div>
       <footer className="bg-slate-950 w-[98%] m-auto p-6 pb-3 mb-2 rounded-lg pt-8">
@@ -108,9 +111,19 @@ const Footer = () => {
             {companyInfo.map((menu) => (
               <li
                 key={menu.pageTitle}
-                className="list-none text-xs text-white hover:text-themeColor w-fit"
+                className={`list-none text-xs text-white hover:text-themeColor w-fit`}
               >
-                <Link href={menu.url}>{menu.pageTitle}</Link>
+                <Link
+                  href={menu.url}
+                  className={`${
+                    (menu.url === "/" && pathName === "/") ||
+                    (menu.url !== "/" && pathName.includes(menu.url))
+                      ? "text-themeColor"
+                      : ""
+                  }`}
+                >
+                  {menu.pageTitle}
+                </Link>
               </li>
             ))}
           </div>
@@ -120,7 +133,17 @@ const Footer = () => {
                 key={menu.pageTitle}
                 className="list-none text-xs text-white hover:text-themeColor w-fit"
               >
-                <Link href={menu.url}>{menu.pageTitle}</Link>
+                <Link
+                  href={menu.url}
+                  className={`${
+                    (menu.url === "/" && pathName === "/") ||
+                    (menu.url !== "/" && pathName.includes(menu.url))
+                      ? "text-themeColor"
+                      : ""
+                  }`}
+                >
+                  {menu.pageTitle}
+                </Link>
               </li>
             ))}
           </div>
@@ -130,7 +153,17 @@ const Footer = () => {
                 key={menu.pageTitle}
                 className="list-none text-xs text-white hover:text-themeColor w-fit"
               >
-                <Link href={menu.url}>{menu.pageTitle}</Link>
+                <Link
+                  href={menu.url}
+                  className={`${
+                    (menu.url === "/" && pathName === "/") ||
+                    (menu.url !== "/" && pathName.includes(menu.url))
+                      ? "text-themeColor"
+                      : ""
+                  }`}
+                >
+                  {menu.pageTitle}
+                </Link>
               </li>
             ))}
           </div>
@@ -140,7 +173,17 @@ const Footer = () => {
                 key={menu.pageTitle}
                 className="list-none text-xs text-white hover:text-themeColor w-fit"
               >
-                <Link href={menu.url}>{menu.pageTitle}</Link>
+                <Link
+                  href={menu.url}
+                  className={`${
+                    (menu.url === "/" && pathName === "/") ||
+                    (menu.url !== "/" && pathName.includes(menu.url))
+                      ? "text-themeColor"
+                      : ""
+                  }`}
+                >
+                  {menu.pageTitle}
+                </Link>
               </li>
             ))}
           </div>

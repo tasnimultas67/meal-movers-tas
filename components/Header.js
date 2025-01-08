@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Dialog, DialogPanel } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const pages = [
   { title: "Home", url: "/" },
@@ -14,6 +15,7 @@ const pages = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathName = usePathname();
 
   return (
     <header className="bg-white border-b fixed top-0 w-full z-[1000]">
@@ -70,7 +72,12 @@ export default function Header() {
             <Link
               key={page.title}
               href={page.url}
-              className="text-sm/6 font-medium text-gray-900"
+              className={`${
+                (page.url === "/" && pathName === "/") ||
+                (page.url !== "/" && pathName.includes(page.url))
+                  ? "text-themeColor"
+                  : ""
+              } text-sm/6 font-medium text-gray-900`}
             >
               {page.title}
             </Link>
