@@ -20,10 +20,40 @@ const page = () => {
           together!
         </p>
       </div>
-      <div>
+      <div className="space-y-7">
         <h2 className="text-4xl font-bold tracking-tight text-center">
           Steps to Activation
         </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-3 w-10/12 m-auto">
+          <div className="bg-themeColor/10 p-4 rounded-xl text-center space-y-5 border border-themeColor/30">
+            <div>
+              <p className="text-sm">Step</p>
+              <h3 className="text-5xl font-bold">01</h3>
+            </div>
+            <p className="text-sm">Sign up online</p>
+          </div>
+          <div className="bg-themeColor/10 p-4 rounded-xl text-center space-y-5 border border-themeColor/30">
+            <div>
+              <p className="text-sm">Step</p>
+              <h3 className="text-5xl font-bold">02</h3>
+            </div>
+            <p className="text-sm">Foodi concern person will contact</p>
+          </div>
+          <div className="bg-themeColor/10 p-4 rounded-xl text-center space-y-5 border border-themeColor/30">
+            <div>
+              <p className="text-sm">Step</p>
+              <h3 className="text-5xl font-bold">03</h3>
+            </div>
+            <p className="text-sm">Sign the contract</p>
+          </div>
+          <div className="bg-themeColor/10 p-4 rounded-xl text-center space-y-5 border border-themeColor/30">
+            <div>
+              <p className="text-sm">Step</p>
+              <h3 className="text-5xl font-bold">04</h3>
+            </div>
+            <p className="text-sm">Go Live on Meal Movers</p>
+          </div>
+        </div>
       </div>
     </div>
   );
