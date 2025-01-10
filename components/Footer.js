@@ -43,14 +43,14 @@ const Footer = () => {
   const copyrightYear = new Date().getFullYear();
   return (
     <div>
-      <footer className="bg-slate-950 w-[98%] m-auto p-6 pb-3 mb-2 rounded-lg pt-8">
+      <footer className="bg-gradient-to-t from-black to-themeColor w-[98.5%] m-auto p-6 pb-3 mb-2 rounded-lg pt-8">
         <div className="space-y-3 border-b border-white/10 pb-4">
           <div className="w-fit">
             <Link
               href="/"
               className="font-bold tracking-tight text-3xl flex items-center text-white"
             >
-              <svg className="text-theme size-10 fill-themeColor -scale-75">
+              <svg className="text-theme size-10 fill-white -scale-75">
                 <path
                   fill=""
                   d="M 22.417969 34.070312 C 18.570312 34.949219 14.320312 34.171875 11.195312 31.703125 C 8.800781 29.808594 8.1875 27.402344 8.828125 24.957031 C 10.6875 17.890625 16.890625 17.324219 20.660156 13.726562 C 24.207031 10.339844 23.5625 6.855469 19.679688 6.910156 C 17.546875 6.941406 15.890625 7.878906 14.0625 8.898438 C 11.128906 10.527344 6.789062 13.539062 4.65625 18.277344 C 3.449219 20.957031 3.105469 23.464844 3.8125 26.3125 C 5.90625 34.722656 15.652344 37.109375 22.738281 35.101562 C 22.84375 35.277344 22.957031 35.410156 23.054688 35.503906 C 23.125 35.566406 23.203125 35.625 23.277344 35.683594 C 27.59375 38.972656 33.671875 32.402344 32.253906 29.835938 C 30.867188 27.332031 22.316406 28.601562 22.40625 33.835938 C 22.40625 33.867188 22.40625 33.898438 22.410156 33.929688 C 22.410156 33.976562 22.414062 34.023438 22.417969 34.070312 Z M 30.332031 33.105469 C 29.84375 33.691406 27.480469 35.765625 24.933594 35.121094 C 26.664062 35.871094 29.324219 34.449219 30.332031 33.105469 Z M 30.332031 33.105469 "
@@ -76,7 +76,7 @@ const Footer = () => {
                   fillRule="evenodd"
                 />
               </svg>
-              Meal <span className="text-themeColor ml-1.5">Movers</span>
+              Meal <span className="text-white ml-1.5">Movers</span>
             </Link>
           </div>
           {/* Company Information */}
