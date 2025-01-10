@@ -1,6 +1,12 @@
 import { CheckBadgeIcon, RocketLaunchIcon } from "@heroicons/react/24/solid";
+import { Leckerli_One } from "next/font/google";
 import Image from "next/image";
 import React from "react";
+
+const leckerliOne = Leckerli_One({
+  weight: ["400"],
+  subsets: ["latin"],
+});
 
 export const metadata = {
   title: "Partner With Us — Meal Movers",
@@ -97,6 +103,187 @@ const page = () => {
             </div>
             <p className="text-sm">Go Live on Meal Movers</p>
           </div>
+        </div>
+      </div>
+      {/* Sign Up Form */}
+      <div className="space-y-10">
+        <div className="text-center w-8/12 m-auto space-y-6">
+          <div className="space-y-7">
+            <p
+              className={`${leckerliOne.className} text-start -rotate-6 text-lg text-themeColor`}
+            >
+              Excited?
+            </p>
+            <h2 className="text-4xl font-bold">
+              To become our partner and boost your revenue, complete the form
+              below!
+            </h2>
+          </div>
+          <p className="text-sm">
+            We're craving the greatest things in life, like serving our
+            customers the greatest food and updating the shopping experience.
+            Foodi is a rapidly growing company that manages to retain its appeal
+            as a locally focused service with a strong sense of community.
+          </p>
+        </div>
+        <div className="bg-themeColor/10 p-10 rounded-lg border border-themeColor/20 w-10/12 m-auto">
+          <form action="#" method="POST" className="space-y-3">
+            <div>
+              <label
+                htmlFor="outletName"
+                className="block text-sm/6 font-medium text-gray-900"
+              >
+                Outlet Name
+              </label>
+              <div className="">
+                <input
+                  id="outletName"
+                  name="outletName"
+                  type="text"
+                  required
+                  autoComplete="name"
+                  placeholder="enter your outlet name"
+                  className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                />
+              </div>
+            </div>
+            {/* Owner Name */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <label
+                  htmlFor="firstName"
+                  className="block text-sm/6 font-medium text-gray-900"
+                >
+                  First Name
+                </label>
+                <div className="">
+                  <input
+                    id="firstName"
+                    name="firstName"
+                    type="text"
+                    required
+                    autoComplete="name"
+                    placeholder="enter your first name"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="lastName"
+                  className="block text-sm/6 font-medium text-gray-900"
+                >
+                  Last Name
+                </label>
+                <div className="">
+                  <input
+                    id="lastName"
+                    name="lastName"
+                    type="text"
+                    required
+                    autoComplete="name"
+                    placeholder="enter your last Name"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Email & Phone */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm/6 font-medium text-gray-900"
+                >
+                  Email address
+                </label>
+                <div className="">
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="enter your email address"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                  />
+                </div>
+              </div>
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-sm/6 font-medium text-gray-900"
+                >
+                  Phone Number
+                </label>
+                <div className="">
+                  <input
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    required
+                    autoComplete="tel"
+                    placeholder="enter your phone number"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Business Email & File Uploads */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div>
+                <label
+                  htmlFor="businessEmail"
+                  className="block text-sm/6 font-medium text-gray-900"
+                >
+                  Business Email address
+                </label>
+                <div className="">
+                  <input
+                    id="businessEmail"
+                    name="businessEmail"
+                    type="email"
+                    required
+                    autoComplete="email"
+                    placeholder="enter your business email address"
+                    className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                  />
+                </div>
+              </div>
+              {/* File Uploads */}
+              <div>
+                <div>
+                  <label
+                    htmlFor="outletImg"
+                    className="block text-sm/6 font-medium text-gray-900"
+                  >
+                    Outlet Images (Each image size max 2Mb)
+                  </label>
+                  <div className="">
+                    <input
+                      id="outletImg"
+                      name="outletImg"
+                      type="file"
+                      required
+                      autoComplete="file"
+                      className="block w-full rounded-md bg-white px-3 py-1.5 text-base text-gray-900 outline outline-1 -outline-offset-1 outline-gray-300 placeholder:text-gray-400 focus:outline focus:outline-2 focus:-outline-offset-2 focus:outline-themeColor sm:text-sm/6"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <button
+                type="submit"
+                className="flex w-3/12 justify-center rounded-md bg-themeColor px-3 py-1.5 text-sm/6 font-medium text-white shadow-sm hover:bg-themeColor focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-themeColor"
+              >
+                Submit Request
+              </button>
+            </div>
+          </form>
         </div>
       </div>
       {/* Advantage of Joining Us */}
