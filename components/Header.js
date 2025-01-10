@@ -111,25 +111,21 @@ export default function Header() {
           </div>
           <div className="mt-6 flow-root">
             <div className="-my-6 divide-y divide-gray-500/10">
-              <div className="space-y-2 py-6">
-                <Link
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Features
-                </Link>
-                <Link
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Marketplace
-                </Link>
-                <Link
-                  href="#"
-                  className="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
-                >
-                  Company
-                </Link>
+              <div className="space-y-2 py-6 flex flex-col ">
+                {pages.map((page) => (
+                  <Link
+                    key={page.title}
+                    href={page.url}
+                    className={`${
+                      (page.url === "/" && pathName === "/") ||
+                      (page.url !== "/" && pathName.includes(page.url))
+                        ? "text-themeColor"
+                        : ""
+                    } text-sm/6 font-medium text-gray-900`}
+                  >
+                    {page.title}
+                  </Link>
+                ))}
               </div>
               <div className="py-6">
                 <Link
