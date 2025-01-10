@@ -53,9 +53,18 @@ const page = () => {
           options to suit your business needs. Sign up today and let's grow
           together!
         </p>
+        <div className="pt-10">
+          <Image
+            className="object-cover w-full h-[35rem] rounded-lg object-center"
+            src="https://images.unsplash.com/photo-1695654686808-8e90bd2c6923?q=80&w=1770&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Partner With Us Featured Image"
+            width={1600}
+            height={500}
+          ></Image>
+        </div>
       </div>
       {/* Steps */}
-      <div className="space-y-7">
+      <div className="space-y-7 py-20 pb-10">
         <h2 className="text-4xl font-bold tracking-tight text-center">
           Steps to Activation
         </h2>
