@@ -20,7 +20,7 @@ const companyHelps = [
   { pageTitle: "Partner with us", url: "/become-a-partner" },
   { pageTitle: "Ride with us", url: "#" },
   { pageTitle: "Terms & conditions", url: "/terms-and-conditions" },
-  { pageTitle: "Refund & cancellation", url: "#" },
+  { pageTitle: "Refund & cancellation", url: "/refund-and-cancellation" },
   { pageTitle: "Privacy policy", url: "/privacy-policy" },
   { pageTitle: "Rider Privacy policy", url: "#" },
   { pageTitle: "Partner Privacy policy", url: "/partner-privacy-policy" },
