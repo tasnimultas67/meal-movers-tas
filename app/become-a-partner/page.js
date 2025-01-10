@@ -48,7 +48,7 @@ const howItW = [
 ];
 const page = () => {
   return (
-    <div className="w-11/12 m-auto py-32 space-y-10">
+    <div className="w-11/12 m-auto py-32 pb-14 space-y-10">
       <div className="space-y-5 text-center">
         <h1 className="text-5xl font-bold tracking-tight">Partner With Us</h1>
         <p className="w-8/12 m-auto text-sm">
@@ -334,7 +334,7 @@ const page = () => {
         </div>
       </div>
       {/* How it Works */}
-      <div className="space-y-10 py-10">
+      <div className="space-y-10 py-10 pb-0">
         <h2 className="text-4xl font-bold text-center tracking-tight">
           How it Works
         </h2>
