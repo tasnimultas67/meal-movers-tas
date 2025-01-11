@@ -55,7 +55,7 @@ const page = () => {
         <div
           className={`${hindSiliguri.className} bg-themeColor/20 p-10 rounded-2xl text-center`}
         >
-          <h2 className="text-4xl text-center font-bold">
+          <h2 className="text-4xl text-center font-bold text-themeColor">
             নতুন রাইডারদের ১৭৫০ টাকা পর্যন্ত জয়েনিং বোনাস*
           </h2>
           <p>"মিল মুভার্স দিয়ে ডেলিভারি শুরু করুন, আজই"</p>
