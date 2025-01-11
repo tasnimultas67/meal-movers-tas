@@ -2,6 +2,7 @@ import FormRideWithUs from "@/components/FormRideWithUs";
 import { ClipboardDocumentIcon } from "@heroicons/react/24/solid";
 import { Hind_Siliguri } from "next/font/google";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const hindSiliguri = Hind_Siliguri({
@@ -11,7 +12,7 @@ const hindSiliguri = Hind_Siliguri({
 
 const page = () => {
   return (
-    <div className="py-24 w-11/12 m-auto">
+    <div className="py-24 w-11/12 m-auto transition-all">
       <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center gap-6">
         {/* Hero Information */}
         <div className={`${hindSiliguri.className} space-y-3`}>
@@ -21,6 +22,13 @@ const page = () => {
             অংশ হোন!
           </h1>
           <p>থাকছে ৪৫,০০০* টাকা পর্যন্ত আয় করার সুযোগ।</p>
+          <div>
+            <Link href="#createProfile">
+              <button className="bg-black hover:bg-themeColor px-3 py-1.5 text-white rounded-md">
+                ডেলিভারি শুরু করুন — আজই
+              </button>
+            </Link>
+          </div>
         </div>
         {/* Featured Image */}
         <div className={`${hindSiliguri.className} relative top-0`}>
@@ -43,8 +51,18 @@ const page = () => {
           </div>
         </div>
       </div>
+      <div className="my-20">
+        <div
+          className={`${hindSiliguri.className} bg-themeColor/20 p-10 rounded-2xl text-center`}
+        >
+          <h2 className="text-4xl text-center font-bold">
+            নতুন রাইডারদের ১৭৫০ টাকা পর্যন্ত জয়েনিং বোনাস*
+          </h2>
+          <p>"মিল মুভার্স দিয়ে ডেলিভারি শুরু করুন, আজই"</p>
+        </div>
+      </div>
       {/* Registration Section */}
-      <div className="py-10 bg-themeColor rounded-xl mt-20">
+      <div className="py-10 bg-themeColor rounded-xl mt-20" id="createProfile">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center">
           <div className="relative top-0">
             <FormRideWithUs></FormRideWithUs>
