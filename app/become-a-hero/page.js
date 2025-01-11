@@ -1,4 +1,5 @@
 import FormRideWithUs from "@/components/FormRideWithUs";
+import { ClipboardDocumentIcon } from "@heroicons/react/24/solid";
 import { Hind_Siliguri } from "next/font/google";
 import Image from "next/image";
 import React from "react";
@@ -42,13 +43,20 @@ const page = () => {
           </div>
         </div>
       </div>
-      <div className="py-20">
+      {/* Registration Section */}
+      <div className="py-10 bg-themeColor rounded-xl mt-20">
         <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-items-center">
-          <div>
+          <div className="relative top-0">
             <FormRideWithUs></FormRideWithUs>
+            <div
+              className={`${hindSiliguri.className} bg-white p-2 px-4 rounded-md w-fit absolute -top-5 left-0 `}
+            >
+              <p className="font-semibold">আপনার প্রোফাইল তৈরী করুন</p>
+            </div>
           </div>
           <div className={`${hindSiliguri.className}`}>
-            <div className="bg-themeColor/10 p-3 rounded-lg w-fit space-y-3">
+            <div className="bg-white/40 p-3 pt-10 rounded-lg w-fit space-y-3 relative top-0 border border-white/60">
+              <ClipboardDocumentIcon className="size-14 text-themeColor p-3 bg-white rounded-md absolute -top-5 -left-5"></ClipboardDocumentIcon>
               <p className="font-semibold">আবেদন সম্পূর্ণ করুনঃ</p>
               <ul>
                 <li>১. আপনার প্রোফাইল তৈরী করুন</li>
