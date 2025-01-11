@@ -18,7 +18,7 @@ const companyInfo = [
 
 const companyHelps = [
   { pageTitle: "Partner with us", url: "/become-a-partner" },
-  { pageTitle: "Ride with us", url: "#" },
+  { pageTitle: "Ride with us", url: "/become-a-hero" },
   { pageTitle: "Terms & conditions", url: "/terms-and-conditions" },
   { pageTitle: "Refund & cancellation", url: "/refund-and-cancellation" },
   { pageTitle: "Privacy policy", url: "/privacy-policy" },
