@@ -51,6 +51,7 @@ const page = () => {
           </div>
         </div>
       </div>
+      {/* Bonus Offers Section */}
       <div className="my-20">
         <div
           className={`${hindSiliguri.className} bg-themeColor/20 p-10 rounded-2xl text-center`}
@@ -83,6 +84,28 @@ const page = () => {
                 <li>৪. আমাদের সার্ভিস চুক্তিতে সম্মত হন</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Eye catching benefit */}
+      <div className={`${hindSiliguri.className} py-28 pb-0 space-y-10`}>
+        <h2 className="text-center text-6xl font-bold">
+          আকর্ষণীয় সুবিধা আপনার জন্য
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 w-10/12 m-auto">
+          <div className="p-8 bg-themeColor/10 rounded-lg flex items-center justify-center">
+            <p>
+              কোয়েস্ট বোনাস, নতুন রাইডার বোনাস সহ বাড়তি আয়ের সুযোগ। আর থাকছে
+              আকর্ষণীয় রাইডার টিপস ও বন্ধুদের রেফারাল প্রোগ্রাম।
+            </p>
+          </div>
+          <div className="p-8 bg-themeColor/10 rounded-lg flex items-center justify-center">
+            <p>
+              ফ্লেক্সিবল কাজের সময়, লোকেশন ও প্রতিদিন পেমেন্ট। সেট করুন নিজের
+              কাজের সময়, আপনার পছন্দের জোন এবং প্রতিদিন পেয়ে যান আপনার অর্জিত
+              টাকা।
+            </p>
           </div>
         </div>
       </div>
