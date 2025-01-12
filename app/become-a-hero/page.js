@@ -10,6 +10,12 @@ const hindSiliguri = Hind_Siliguri({
   subsets: ["latin"],
 });
 
+export const metadata = {
+  title: "Ride with us — Meal Movers",
+  description:
+    "Meal Movers is a premier food delivery service dedicated to bringing delicious meals right to your doorstep. We partner with a wide range of local restaurants and eateries to offer a diverse menu that caters to all tastes and dietary preferences. Whether you're craving comfort food, healthy options, or gourmet dishes, Meal Movers ensures a seamless and timely delivery experience. Our mission is to make mealtime convenient and enjoyable, so you can focus on what matters most.",
+};
+
 const page = () => {
   return (
     <div className="py-24 w-11/12 m-auto transition-all">
