@@ -1,0 +1,161 @@
+[
+    {
+        "restTitle": "Spicy Delight",
+        "restProfile": "spicy_delight_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1735030379333-134693a094f6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.5,
+        "restAddress": "House 12, Road 2, Gulshan 1, Dhaka, Bangladesh",
+        "restTags": ["Spicy", "Curry", "Traditional"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Chicken Curry", "Spicy Beef", "Rice"]
+    },
+    {
+        "restTitle": "Burger Haven",
+        "restProfile": "burger_haven_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1717158544633-7dff75fca8e9?q=80&w=1904&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.2,
+        "restAddress": "House 9, Block B, Banani, Dhaka, Bangladesh",
+        "restTags": ["Burger", "Fries", "Shake"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Classic Burger", "Cheese Fries", "Chocolate Shake"]
+    },
+    {
+        "restTitle": "Noodle House",
+        "restProfile": "noodle_house_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1714981353778-d614c3f29490?q=80&w=1888&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.6,
+        "restAddress": "House 5, Road 10, Dhanmondi, Dhaka, Bangladesh",
+        "restTags": ["Noodles", "Asian", "Soup"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Chicken Noodle", "Beef Noodle", "Hot Soup"]
+    },
+    {
+        "restTitle": "Dhaka Diner",
+        "restProfile": "dhaka_diner_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1711378097440-04014aedf312?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.3,
+        "restAddress": "House 3, Road 5, Uttara, Dhaka, Bangladesh",
+        "restTags": ["Local", "Diner", "Comfort Food"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Beef Steak", "Mashed Potatoes", "Grilled Chicken"]
+    },
+    {
+        "restTitle": "Green Garden",
+        "restProfile": "green_garden_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1688634243150-9876ffae2baf?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.4,
+        "restAddress": "House 7, Road 3, Baridhara, Dhaka, Bangladesh",
+        "restTags": ["Salad", "Organic", "Vegan"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Caesar Salad", "Green Smoothie", "Vegan Wrap"]
+    },
+    {
+        "restTitle": "Urban Cafe",
+        "restProfile": "urban_cafe_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1669926504091-2735b6cb51a7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.7,
+        "restAddress": "House 10, Road 6, Mirpur, Dhaka, Bangladesh",
+        "restTags": ["Coffee", "Brunch", "Pastry"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Cappuccino", "Croissant", "Avocado Toast"]
+    },
+    {
+        "restTitle": "Sushi Palace",
+        "restProfile": "sushi_palace_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1690292892715-4130ddae52e8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.8,
+        "restAddress": "House 15, Road 4, Mohakhali, Dhaka, Bangladesh",
+        "restTags": ["Sushi", "Japanese", "Seafood"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Salmon Roll", "Tuna Sashimi", "Miso Soup"]
+    },
+    {
+        "restTitle": "Tandoori Treats",
+        "restProfile": "tandoori_treats_profile.jpg",
+        "restCover": "https://plus.unsplash.com/premium_photo-1707494324528-38cc510756e5?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.5,
+        "restAddress": "House 8, Road 1, Banasree, Dhaka, Bangladesh",
+        "restTags": ["Tandoori", "Indian", "Grill"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Tandoori Chicken", "Naan", "Butter Paneer"]
+    },
+    {
+        "restTitle": "Pizza Paradise",
+        "restProfile": "pizza_paradise_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1511688878353-3a2f5be94cd7?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.6,
+        "restAddress": "House 18, Block C, Bashundhara, Dhaka, Bangladesh",
+        "restTags": ["Pizza", "Italian", "Fast Food"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Margherita Pizza", "Pepperoni Pizza", "Garlic Bread"]
+    },
+    {
+        "restTitle": "Grill Master",
+        "restProfile": "grill_master_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1503810473512-f64b56827964?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.7,
+        "restAddress": "House 14, Road 7, Lalmatia, Dhaka, Bangladesh",
+        "restTags": ["Grill", "BBQ", "Steakhouse"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["BBQ Ribs", "Grilled Fish", "Corn on the Cob"]
+    },
+    {
+        "restTitle": "Dessert Delight",
+        "restProfile": "dessert_delight_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1556386734-4227a180d19e?q=80&w=1905&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.8,
+        "restAddress": "House 2, Road 8, Adabor, Dhaka, Bangladesh",
+        "restTags": ["Dessert", "Pastry", "Ice Cream"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Chocolate Cake", "Vanilla Ice Cream", "Macarons"]
+    },
+    {
+        "restTitle": "Seafood Shack",
+        "restProfile": "seafood_shack_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1556386470-bcdc6a5e9b9e?q=80&w=1890&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.9,
+        "restAddress": "House 20, Road 9, Rampura, Dhaka, Bangladesh",
+        "restTags": ["Seafood", "Grill", "Fresh"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Grilled Prawns", "Lobster Bisque", "Fish Tacos"]
+    },
+    {
+        "restTitle": "Taco Town",
+        "restProfile": "taco_town_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1622484212477-39491bcc7131?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.4,
+        "restAddress": "House 11, Road 6, Tejgaon, Dhaka, Bangladesh",
+        "restTags": ["Mexican", "Tacos", "Spicy"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Chicken Tacos", "Beef Tacos", "Guacamole"]
+    },
+    {
+        "restTitle": "Pasta Perfection",
+        "restProfile": "pasta_perfection_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1622484212239-7f8a0d790847?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.7,
+        "restAddress": "House 19, Road 2, Shantinagar, Dhaka, Bangladesh",
+        "restTags": ["Italian", "Pasta", "Comfort Food"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Spaghetti Carbonara", "Fettuccine Alfredo", "Garlic Bread"]
+    },
+    {
+        "restTitle": "Kebab Kingdom",
+        "restProfile": "kebab_kingdom_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1622818426027-8909055faae8?q=80&w=1965&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.5,
+        "restAddress": "House 4, Road 1, Malibagh, Dhaka, Bangladesh",
+        "restTags": ["Kebab", "Middle Eastern", "Grill"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Chicken Kebab", "Beef Kebab", "Pita Bread"]
+    },
+    {
+        "restTitle": "Vegan Vibes",
+        "restProfile": "vegan_vibes_profile.jpg",
+        "restCover": "https://images.unsplash.com/photo-1622485831546-0b42abdf8bd4?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+        "restRating": 4.6,
+        "restAddress": "House 13, Road 3, Paltan, Dhaka, Bangladesh",
+        "restTags": ["Vegan", "Organic", "Healthy"],
+        "restMmOrder": "100tk",
+        "restFdItms": ["Vegan Burger", "Quinoa Salad", "Smoothie Bowl"]
+    }]
