@@ -92,12 +92,16 @@ const Footer = () => {
             <div className="space-y-1">
               <p className="flex items-start md:items-center justify-start gap-1">
                 <PhoneIcon className="size-4"></PhoneIcon>{" "}
-                <Link href="tel:+880012345678910">+880012345678910</Link>
+                <Link href="tel:+8801311026198">+8801311026198</Link>
+                <Link href="tel:+8801833777769">+8801833777769</Link>
               </p>
               <p className="flex items-start md:items-center justify-start gap-1">
                 <EnvelopeIcon className="size-4"></EnvelopeIcon>
                 <Link href="mailto:info@mealmovers.vercel.app">
                   info@mealmovers.vercel.app
+                </Link>
+                <Link href="mailto:tasnimul.haque6@gmail.com">
+                  tasnimul.haque6@gmail.com
                 </Link>
               </p>
               <p className="flex items-start md:items-center justify-start gap-1">
