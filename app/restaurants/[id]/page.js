@@ -1,10 +1,41 @@
+"use client";
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import "swiper/css";
+// import "swiper/css/free-mode";
+// import "swiper/css/pagination";
+// import { FreeMode, Pagination } from "swiper";
 
-const page = () => {
+const foods = [
+  "Salad",
+  "Sandwich",
+  "Bread",
+  "Steak",
+  "Tuna Steak",
+  "Fish",
+  "Shrimp",
+  "Rice",
+  "Spaghetti",
+  "Pizza",
+  "Hamburger",
+  "Eggs",
+  "Cheese",
+  "Sausages",
+  "Apple Juice",
+  "Grape Juice",
+  "Milk",
+  "Candy",
+  "CookiePie",
+  "Cake",
+  "Cupcake",
+];
+
+const Page = () => {
   return (
-    <div className="w-11/12 m-auto py-20 pb-10">
+    <div className="w-11/12 m-auto py-20 pb-10 space-y-3">
+      {/* Restaurant Single Page Hero Section */}
       <div className="relative bottom-0 left-0 group/restHover overflow-hidden">
         <div className="shrink-0 relative rounded-lg overflow-hidden w-full h-[20rem] md:h-[20rem] before:absolute before:inset-x-0 before:z-[1] before:size-full before:bg-gradient-to-t before:from-gray-900">
           <Image
@@ -43,8 +74,43 @@ const page = () => {
           </div>
         </div>
       </div>
+      {/* Food Tabs */}
+      <div>
+        <div className="bg-themeColor/10 p-2 rounded-md">
+          <div className="flex items-center gap-2 overflow-y-scroll">
+            {foods.map((food) => (
+              <button
+                className="w-fit text-sm bg-themeColor/40 rounded p-1"
+                key={food}
+              >
+                {food}
+              </button>
+            ))}
+          </div>
+          {/* <div>
+            <Swiper
+              slidesPerView={3}
+              spaceBetween={30}
+              freeMode={true}
+              pagination={{ clickable: true }}
+              modules={[FreeMode, Pagination]}
+              className="mySwiper"
+            >
+              <SwiperSlide>Slide 1</SwiperSlide>
+              <SwiperSlide>Slide 2</SwiperSlide>
+              <SwiperSlide>Slide 3</SwiperSlide>
+              <SwiperSlide>Slide 4</SwiperSlide>
+              <SwiperSlide>Slide 5</SwiperSlide>
+              <SwiperSlide>Slide 6</SwiperSlide>
+              <SwiperSlide>Slide 7</SwiperSlide>
+              <SwiperSlide>Slide 8</SwiperSlide>
+              <SwiperSlide>Slide 9</SwiperSlide>
+            </Swiper>
+          </div> */}
+        </div>
+      </div>
     </div>
   );
 };
 
-export default page;
+export default Page;
