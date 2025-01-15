@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function page() {
   return (
     <div className="h-screen">
@@ -69,13 +71,13 @@ export default function page() {
           </form>
 
           <p className="mt-10 text-center text-sm/6 text-gray-500">
-            Not a member?{" "}
-            <a
+            Not a member? {""}
+            <Link
               href="#"
               className="font-semibold text-themeColor hover:text-themeColor"
             >
-              Start a 14 day free trial
-            </a>
+              Register now
+            </Link>
           </p>
         </div>
       </div>
