@@ -2,11 +2,12 @@
 import { MapPin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/free-mode";
-// import "swiper/css/pagination";
-// import { FreeMode, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/pagination";
+import { FreeMode, Pagination } from "swiper/modules";
+// import { Swiper, SwiperSlide } from 'swiper/react';
 
 const foods = [
   "Salad",
@@ -78,16 +79,25 @@ const Page = () => {
       <div>
         <div className="bg-themeColor/10 p-2 rounded-md">
           <div className="flex items-center gap-2 overflow-y-scroll">
-            {foods.map((food) => (
-              <button
-                className="w-fit text-sm bg-themeColor/40 rounded p-1"
-                key={food}
-              >
-                {food}
-              </button>
-            ))}
+            <Swiper
+              slidesPerView={2}
+              spaceBetween={5}
+              freeMode={true}
+              // pagination={{ clickable: true }}
+              modules={[FreeMode, Pagination]}
+              className="mySwiper"
+            >
+              {foods.map((food) => (
+                <SwiperSlide
+                  className="bg-white !w-fit px-2 py-1 text-sm rounded cursor-pointer "
+                  key={food}
+                >
+                  {food}
+                </SwiperSlide>
+              ))}
+            </Swiper>
           </div>
-          {/* <div>
+          {/* <div className="bg-themeColor/20">
             <Swiper
               slidesPerView={3}
               spaceBetween={30}
