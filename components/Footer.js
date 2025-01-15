@@ -189,7 +189,7 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 {/* Facebook Link */}
                 <Link href="#">
-                  <div className="p-2 bg-white/10 w-fit rounded hover:bg-themeColor">
+                  <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor">
                     <svg
                       className="size-4 !fill-white "
                       xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +201,7 @@ const Footer = () => {
                 </Link>
                 {/* Instagram LInk */}
                 <Link href="#">
-                  <div className="p-2 bg-white/10 w-fit rounded hover:bg-themeColor">
+                  <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor">
                     <svg
                       className="size-4 !fill-white "
                       xmlns="http://www.w3.org/2000/svg"
@@ -213,7 +213,7 @@ const Footer = () => {
                 </Link>
                 {/* Youtube Link */}
                 <Link href="#">
-                  <div className="p-2 bg-white/10 w-fit rounded hover:bg-themeColor">
+                  <div className="p-2 bg-themeColor/30 w-fit rounded hover:bg-themeColor">
                     <svg
                       className="size-4 !fill-white "
                       xmlns="http://www.w3.org/2000/svg"
