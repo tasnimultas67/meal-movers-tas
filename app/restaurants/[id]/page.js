@@ -3,11 +3,7 @@ import { MapPin } from "lucide-react";
 import Image from "next/image";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/pagination";
-import { FreeMode, Pagination } from "swiper/modules";
-// import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar } from "swiper/modules"; // Removed A11y
 
 const foods = [
   "Salad",
@@ -60,14 +56,13 @@ const Page = () => {
               ></Image>
             </div>
             {/* Restaurant Information */}
-            <div className=" text-white space-y-3 text-center md:text-left">
+            <div className="text-white space-y-3 text-center md:text-left">
               <h3 className="text-4xl font-semibold tracking-tight">
                 Burger House
               </h3>
-
-              <div className="text-sm flex items-center justify-between gap-3 ">
-                <p className=" flex items-center justify-start gap-1">
-                  <MapPin className="size-3.5 "></MapPin>
+              <div className="text-sm flex items-center justify-between gap-3">
+                <p className="flex items-center justify-start gap-1">
+                  <MapPin className="size-3.5"></MapPin>
                   House 9, Block B, Banani, Dhaka, Bangladesh
                 </p>
               </div>
@@ -76,48 +71,24 @@ const Page = () => {
         </div>
       </div>
       {/* Food Tabs */}
-      <div>
-        <div className="bg-themeColor/10 p-2 rounded-md">
-          <div className="flex items-center gap-2 overflow-y-scroll">
-            <Swiper
-              slidesPerView={2}
-              spaceBetween={5}
-              freeMode={true}
-              // pagination={{ clickable: true }}
-              modules={[FreeMode, Pagination]}
-              className="mySwiper"
+      <div className="bg-themeColor/10 p-2 rounded-md">
+        <Swiper
+          modules={[Navigation, Pagination, Scrollbar]}
+          spaceBetween={20}
+          slidesPerView={3}
+          navigation
+          pagination={{ clickable: true }}
+          scrollbar={{ draggable: true }}
+        >
+          {foods.map((food) => (
+            <SwiperSlide
+              key={food}
+              className="flex-none w-48 h-48 bg-red-200 m-2 flex items-center justify-center rounded"
             >
-              {foods.map((food) => (
-                <SwiperSlide
-                  className="bg-white !w-fit px-2 py-1 text-sm rounded cursor-pointer "
-                  key={food}
-                >
-                  {food}
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-          {/* <div className="bg-themeColor/20">
-            <Swiper
-              slidesPerView={3}
-              spaceBetween={30}
-              freeMode={true}
-              pagination={{ clickable: true }}
-              modules={[FreeMode, Pagination]}
-              className="mySwiper"
-            >
-              <SwiperSlide>Slide 1</SwiperSlide>
-              <SwiperSlide>Slide 2</SwiperSlide>
-              <SwiperSlide>Slide 3</SwiperSlide>
-              <SwiperSlide>Slide 4</SwiperSlide>
-              <SwiperSlide>Slide 5</SwiperSlide>
-              <SwiperSlide>Slide 6</SwiperSlide>
-              <SwiperSlide>Slide 7</SwiperSlide>
-              <SwiperSlide>Slide 8</SwiperSlide>
-              <SwiperSlide>Slide 9</SwiperSlide>
-            </Swiper>
-          </div> */}
-        </div>
+              {food}
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );
