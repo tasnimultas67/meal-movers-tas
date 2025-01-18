@@ -9,7 +9,7 @@ const companyInfo = [
   { pageTitle: "Home", url: "/" },
   { pageTitle: "About Us", url: "/about-us" },
   { pageTitle: "Contact Us", url: "/contact-us" },
-  { pageTitle: "Press", url: "#" },
+  { pageTitle: "Dashboard", url: "/dashboard" },
   { pageTitle: "How Meal Movers works", url: "/how-meal-movers-works" },
   { pageTitle: "Download apps", url: "#" },
   { pageTitle: "Careers", url: "/careers" },
