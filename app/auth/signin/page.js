@@ -5,6 +5,7 @@ import { useEffect } from "react";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import Image from "next/image";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const adminEmail = "tasnimul.haque6@gmail.com"; // Replace with the actual admin email
 
@@ -96,6 +97,20 @@ export default function SignIn() {
               className="mt-1 px-2 py-1 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Password"
             />
+          </div>
+          <div className="items-top flex space-x-2">
+            <Checkbox id="terms1" />
+            <div className="grid gap-1 leading-none">
+              <label
+                htmlFor="terms1"
+                className="text-xs font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                Accept terms and conditions
+              </label>
+              <p className="text-xs text-muted-foreground">
+                You agree to our Terms of Service and Privacy Policy.
+              </p>
+            </div>
           </div>
           <button
             type="submit"
