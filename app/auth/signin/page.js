@@ -30,8 +30,15 @@ export default function SignIn() {
   };
 
   const signInWithEmail = async (email, password) => {
-    const result = await signInWithEmailAndPassword(auth, email, password);
-    handleUserRoles(result.user);
+    try {
+      const result = await signInWithEmailAndPassword(auth, email, password);
+      handleUserRoles(result.user);
+    } catch (error) {
+      console.error("Error during sign-in:", error);
+      alert(
+        `Failed to sign in: ${error.message}. Please check your credentials and try again.`
+      );
+    }
   };
 
   const handleUserRoles = async (user) => {
@@ -51,6 +58,10 @@ export default function SignIn() {
     e.preventDefault();
     const email = e.target.email.value;
     const password = e.target.password.value;
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+
     signInWithEmail(email, password);
   };
 
