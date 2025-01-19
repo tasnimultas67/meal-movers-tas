@@ -4,6 +4,7 @@ import { auth, googleProvider, firestore } from "../../../firebaseConfig";
 import { useEffect } from "react";
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
+import Image from "next/image";
 
 const adminEmail = "tasnimul.haque6@gmail.com"; // Replace with the actual admin email
 
@@ -49,11 +50,18 @@ export default function SignIn() {
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
       <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
-        <h2 className="text-2xl font-bold mb-6 text-center">Sign In</h2>
+        <h2 className="text-2xl font-semibold mb-6 text-center">Sign In</h2>
         <button
           onClick={signInWithGoogle}
-          className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded w-full mb-4"
+          className="bg-blue-600 hover:bg-blue-600 text-white font-medium p-0.5 rounded w-fit mb-4 text-sm flex items-center justify-start gap-2 pr-3"
         >
+          <Image
+            src={`/Google_G_Logo.webp`}
+            className="size-8 bg-white p-2 rounded-sm"
+            width={100}
+            height={200}
+            alt="Sign in with google"
+          ></Image>
           Sign in with Google
         </button>
         <form onSubmit={handleEmailSignIn} className="space-y-4">
@@ -69,7 +77,7 @@ export default function SignIn() {
               name="email"
               id="email"
               required
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 px-2 py-1  block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Email address"
             />
           </div>
@@ -85,13 +93,13 @@ export default function SignIn() {
               name="password"
               id="password"
               required
-              className="mt-1 p-2 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 px-2 py-1 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
               placeholder="Password"
             />
           </div>
           <button
             type="submit"
-            className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded w-full"
+            className="bg-green-800 hover:bg-themeColor text-white font-medium py-2 px-4 rounded w-full text-sm"
           >
             Sign in with Email
           </button>
