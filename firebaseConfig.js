@@ -13,6 +13,8 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
-export const firestore = getFirestore(app);
-export const googleProvider = new GoogleAuthProvider();
+const auth = getAuth(app);
+const firestore = getFirestore(app);
+const googleProvider = new GoogleAuthProvider();
+
+export { app, auth, firestore, googleProvider };

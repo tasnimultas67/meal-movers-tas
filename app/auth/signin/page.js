@@ -1,28 +1,40 @@
 "use client";
+
 // app/auth/signin/page.js
-import { auth, googleProvider, firestore } from "../../../firebaseConfig";
+import {
+  getAuth,
+  signInWithPopup,
+  signInWithEmailAndPassword,
+  GoogleAuthProvider,
+} from "firebase/auth";
+import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
 import { useEffect } from "react";
+import { app } from "../../../firebaseConfig";
+
+const auth = getAuth(app);
+const firestore = getFirestore(app);
+const googleProvider = new GoogleAuthProvider();
 
 const adminEmail = "admin@example.com"; // Replace with the actual admin email
 
 export default function SignIn() {
   const signInWithGoogle = async () => {
-    const result = await auth.signInWithPopup(googleProvider);
+    const result = await signInWithPopup(auth, googleProvider);
     handleUserRoles(result.user);
   };
 
   const signInWithEmail = async (email, password) => {
-    const result = await auth.signInWithEmailAndPassword(email, password);
+    const result = await signInWithEmailAndPassword(auth, email, password);
     handleUserRoles(result.user);
   };
 
   const handleUserRoles = async (user) => {
-    const userRef = firestore.collection("users").doc(user.uid);
-    const userDoc = await userRef.get();
+    const userRef = doc(firestore, "users", user.uid);
+    const userDoc = await getDoc(userRef);
 
-    if (!userDoc.exists) {
+    if (!userDoc.exists()) {
       const role = user.email === adminEmail ? "admin" : "viewer";
-      userRef.set({
+      await setDoc(userRef, {
         email: user.email,
         role: role,
       });
