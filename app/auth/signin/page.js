@@ -1,3 +1,4 @@
+"use client";
 // app/auth/signin/page.js
 import { auth, googleProvider, firestore } from "../../../firebaseConfig";
 import { useEffect } from "react";
