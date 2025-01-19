@@ -2,6 +2,7 @@
 // app/auth/signin/page.js
 import { auth, googleProvider, firestore } from "../../../firebaseConfig";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation"; // Use next/navigation instead of next/router
 import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
 import { doc, getDoc, setDoc } from "firebase/firestore";
 import Image from "next/image";
@@ -10,6 +11,19 @@ import { Checkbox } from "@/components/ui/checkbox";
 const adminEmail = "tasnimul.haque6@gmail.com"; // Replace with the actual admin email
 
 export default function SignIn() {
+  const router = useRouter();
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        // User is logged in, redirect to the home page
+        router.push("/");
+      }
+    });
+
+    return () => unsubscribe();
+  }, [router]);
+
   const signInWithGoogle = async () => {
     const result = await signInWithPopup(auth, googleProvider);
     handleUserRoles(result.user);
@@ -39,14 +53,6 @@ export default function SignIn() {
     const password = e.target.password.value;
     signInWithEmail(email, password);
   };
-
-  useEffect(() => {
-    auth.onAuthStateChanged(async (user) => {
-      if (user) {
-        handleUserRoles(user);
-      }
-    });
-  }, []);
 
   return (
     <div className="min-h-screen flex flex-col justify-center items-center bg-gray-100">
