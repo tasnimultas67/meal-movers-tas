@@ -15,7 +15,7 @@ const auth = getAuth(app);
 const firestore = getFirestore(app);
 const googleProvider = new GoogleAuthProvider();
 
-const adminEmail = "admin@example.com"; // Replace with the actual admin email
+const adminEmail = "tasnimul.haque06@gmail.com"; // Replace with the actual admin email
 
 export default function SignIn() {
   const signInWithGoogle = async () => {
