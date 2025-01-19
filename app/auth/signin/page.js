@@ -1,21 +1,11 @@
 "use client";
-
 // app/auth/signin/page.js
-import {
-  getAuth,
-  signInWithPopup,
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-} from "firebase/auth";
-import { getFirestore, doc, getDoc, setDoc } from "firebase/firestore";
+import { auth, googleProvider, firestore } from "../../../firebaseConfig";
 import { useEffect } from "react";
-import { app } from "../../../firebaseConfig";
+import { signInWithPopup, signInWithEmailAndPassword } from "firebase/auth";
+import { doc, getDoc, setDoc } from "firebase/firestore";
 
-const auth = getAuth(app);
-const firestore = getFirestore(app);
-const googleProvider = new GoogleAuthProvider();
-
-const adminEmail = "tasnimul.haque06@gmail.com"; // Replace with the actual admin email
+const adminEmail = "tasnimul.haque6@gmail.com"; // Replace with the actual admin email
 
 export default function SignIn() {
   const signInWithGoogle = async () => {
