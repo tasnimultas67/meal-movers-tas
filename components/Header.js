@@ -1,10 +1,18 @@
 "use client";
-
-import { useState } from "react";
-import { Dialog, DialogPanel } from "@headlessui/react";
+import {
+  Dialog,
+  DialogPanel,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuItems,
+} from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
+import { auth } from "../firebaseConfig";
+import { LayoutDashboard, LogOut } from "lucide-react";
 
 const pages = [
   { title: "Home", url: "/" },
@@ -14,8 +22,21 @@ const pages = [
 ];
 
 export default function Header() {
+  const [user, setUser] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const pathName = usePathname();
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+        console.log("Current logged-in user:", user);
+      } else {
+        setUser(null);
+        console.log("No user is logged in");
+      }
+    });
+    return () => unsubscribe();
+  }, []);
 
   return (
     <header className="bg-white border-b fixed top-0 w-full z-[1000]">
@@ -83,10 +104,53 @@ export default function Header() {
             </Link>
           ))}
         </div>
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link href="/login" className="text-sm/6 font-semibold text-gray-900">
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
+        {/* User Information */}
+        <div className="hidden lg:flex lg:flex-1 lg:justify-end relative top-0">
+          {user ? (
+            <Menu as="div" className="relative">
+              <MenuButton className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                <img
+                  src={user.photoURL}
+                  alt={user.displayName}
+                  className="w-10 h-10 rounded-full"
+                />
+              </MenuButton>
+              <MenuItems
+                transition
+                className="absolute right-0 z-10 mt-3 w-48 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 transition focus:outline-none data-[closed]:scale-95 data-[closed]:transform data-[closed]:opacity-0 data-[enter]:duration-100 data-[leave]:duration-75 data-[enter]:ease-out data-[leave]:ease-in text-sm space-y-1 p-1.5"
+                anchor="bottom"
+              >
+                <p className="p-2 font-semibold tracking-tight">
+                  {user.displayName}
+                </p>
+                <MenuItem>
+                  <Link
+                    className=" data-[focus]:bg-blue-100 flex items-center justify-start gap-1 p-1.5 rounded"
+                    href="/dashboard"
+                  >
+                    <LayoutDashboard className="size-3 fill-themeColor" />
+                    Dashboard
+                  </Link>
+                </MenuItem>
+                <MenuItem>
+                  <button
+                    onClick={() => auth.signOut()}
+                    className="data-[focus]:bg-blue-100 flex items-center justify-start gap-1 p-1.5 w-full rounded"
+                  >
+                    <LogOut className="size-3 fill-themeColor" />
+                    Sign Out
+                  </button>
+                </MenuItem>
+              </MenuItems>
+            </Menu>
+          ) : (
+            <Link
+              href="/auth/signin"
+              className="text-sm/6 font-semibold text-gray-900"
+            >
+              Log in <span aria-hidden="true">&rarr;</span>
+            </Link>
+          )}
         </div>
       </nav>
       <Dialog
