@@ -78,7 +78,7 @@ export default function SignIn() {
               name="email"
               id="email"
               required
-              className="mt-1 px-2 py-1  block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 p-1.5  block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
               placeholder="Email address"
             />
           </div>
@@ -94,7 +94,7 @@ export default function SignIn() {
               name="password"
               id="password"
               required
-              className="mt-1 px-2 py-1 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500"
+              className="mt-1 p-1.5 block w-full border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 text-sm"
               placeholder="Password"
             />
           </div>
